@@ -3,8 +3,10 @@ Config files for [Regolith Desktop](https://regolith-linux.org/) and zsh environ
 The repo is meant to be cloned into your home dir and the environment to be created by [stow](https://www.gnu.org/software/stow/).<br>
 ## Necessary packages 
 on top of the above:<br>
-- fzf
 - colorls
+- fonts-powerline
+- fzf
+- maim
 - p10k theme
 
 ## Usage
