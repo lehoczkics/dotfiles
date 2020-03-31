@@ -4,11 +4,13 @@ The repo is meant to be cloned into your home dir and the environment to be crea
 ## Necessary packages 
 on top of the above:<br>
 - alacritty
+- autojump
 - colorls
+- fonts-hack
 - fonts-powerline
 - fzf
 - maim
-- p10k theme
+- [p10k theme](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 
 ## Usage
 ```
