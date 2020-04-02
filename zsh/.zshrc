@@ -117,18 +117,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias code=codium
-alias vizsh="vim ~/.zshrc && source ~/.zshrc"
-alias vii3="vim ~/.config/regolith/i3/config"
-alias cddl="cd ~/Downloads; ls -ltr | tail"
-alias cddo="cd ~/Documents; ls -ltr | tail"
-alias ltt="ls -ltr | tail -20"
-alias sshcon="bash ~/src/scripts-sshcon/sshcon"
-alias src="cd /home/tsabi/src"
-alias please='sudo $(history -1| sed "s/^ [0-9]\+ //")'
 
-# alter TERM in ssh sessions
-alias ssh='TERM=xterm-256color ssh'
+# Aliases included from separate config
+if [ -f ~/.zsh_aliases ]; then
+	    . ~/.zsh_aliases
+fi
+
+# local aliases
+if [ -f ~/.zsh_local ]; then
+	    . ~/.zsh_local
+fi
 
 # fuzzy finder
 export FZF_DEFAULT_COMMAND='fdfind --type f'

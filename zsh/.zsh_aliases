@@ -1,0 +1,11 @@
+alias code=codium
+alias vizsh="nvim ~/.zshrc && source ~/.zshrc"
+alias vii3="nvim ~/.config/regolith/i3/config"
+alias cddl="cd ~/Downloads; ls -ltr | tail"
+alias cddo="cd ~/Documents; ls -ltr | tail"
+alias ltt="ls -ltr | tail -20"
+alias src="cd ~/src"
+alias please='sudo $(history -1| sed "s/^ [0-9]\+ //")'
+alias ssh='TERM=xterm-256color ssh'
+alias vim="nvim"
+alias vi="nvim"
