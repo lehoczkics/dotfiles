@@ -12,3 +12,7 @@ alias please='sudo $(history -1| sed "s/^ [0-9]\+ //")'
 alias ssh='TERM=xterm-256color ssh'
 alias vim="nvim"
 alias vi="nvim"
+# Create new or reset to existing branch and push it to git server with gbr <new_branch>
+# Danger! If the branch exists locally then local modifications will be rejected.
+# When in doubt run git branch -a first or use gcb <new_branch> and ggpush
+function gbr () { git checkout -B "$1"; git push -u origin "$1"; }
