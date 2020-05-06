@@ -1,5 +1,6 @@
 # dotfiles
 Config files for [Regolith Desktop](https://regolith-linux.org/) and zsh environment with [oh-my-zsh](https://ohmyz.sh/).<br>
+![neofetch output](img/neofetch_focal_20200505.png)<br>
 The repo is meant to be cloned into your home dir and the environment to be created by [stow](https://www.gnu.org/software/stow/).<br>
 ## Necessary packages 
 on top of the above:<br>
