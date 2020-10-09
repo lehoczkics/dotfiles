@@ -547,7 +547,7 @@ for_window [class="Yubioath-gui"] floating enable
 
 # scratchpads
 exec geany
-for_window [class="Geany"] floating enable, move to scratchpad, scratchpad show
+for_window [class="Geany"] floating enable, resize set 1024 768; move position center, move to scratchpad, scratchpad show
 bindsym $mod+q [class="Geany"] scratchpad show
 
 # clipboard manager
@@ -555,3 +555,5 @@ set $greenclip ~/bin/greenclip
 bindsym $mod+Shift+v exec rofi -modi "clipboard:$greenclip print" -show clipboard
 exec --no-startup-id $greenclip daemon
 
+# middle mouse click on Alt + v
+bindsym $alt+v exec /usr/bin/xdotool click 2
