@@ -560,3 +560,9 @@ bindsym $alt+v exec /usr/bin/xdotool click 2
 
 # rename workspaces
 bindsym $mod+u exec i3-input -F "rename workspace to \"$(i3-msg -t get_workspaces | jq -r \"map(select(.focused))[0].num\"):%s\"" -P 'New name for this workspace: '
+
+# back_and_forth with Super + x
+workspace_auto_back_and_forth yes
+bindsym $mod+x workspace back_and_forth
+bindsym $mod+Shift+x move container to workspace back_and_forth; workspace back_and_forth
+
