@@ -544,11 +544,38 @@ for_window [class="vlc"] floating enable
 for_window [class="org.remmina.Remmina"] floating enable
 for_window [instance="org.remmina.Remmina"] floating enable
 for_window [class="Yubioath-gui"] floating enable
+for_window [class="java-lang-Thread"] floating enable
 
 # scratchpads
-exec geany
-for_window [class="Geany"] floating enable, resize set 1024 768; move position center, move to scratchpad, scratchpad show
-bindsym $mod+q [class="Geany"] scratchpad show
+# start them on load
+exec --no-startup-id geany
+exec --no-startup-id /usr/bin/st -t "Simple Terminal" -f "MesloLGS NF:size=11"
+exec --no-startup-id spotify
+
+# move them to scratch
+for_window [class="Geany"] move to scratchpad
+for_window [class="St"] move to scratchpad
+for_window [class="Spotify"] move to scratchpad
+
+# keybindings
+bindsym $mod+q [class="Geany"] scratchpad show, resize set 1240 1024
+bindsym $mod+s  [class="St"] scratchpad show, resize set 1240 1024, move position center
+bindsym $mod+z [class="Spotify"] scratchpad show, resize set 1240 1024
+
+# scratchpad mode launcher
+set $scratchpad_mode_launcher scratchpad_startup
+mode "$scratchpad_mode_launcher" {
+	bindsym q exec --no-startup-id geany
+	bindsym s exec --no-startup-id /usr/bin/st -t "Simple Terminal" -f "MesloLGS NF:size=11"
+	bindsym z exec --no-startup-id spotify
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+	bindsym $mod+p mode "default"
+}
+bindsym $mod+p mode "$scratchpad_mode_launcher"
+
+# for_window [class="Geany"] floating enable, resize set 1024 768; move position center, move to scratchpad, scratchpad show
+# bindsym $mod+q [class="Geany"] scratchpad show
 
 # clipboard manager
 set $greenclip ~/bin/greenclip
