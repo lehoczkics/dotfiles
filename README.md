@@ -18,8 +18,7 @@ on top of the above:<br>
 cd ~
 git clone git@github.com:lehoczkics/dotfiles.git
 cd dotfiles
-stow env \
-	zsh \
+stow zsh \
 	i3 \
 	alacritty
 ```
