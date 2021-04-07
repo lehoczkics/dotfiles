@@ -27,6 +27,7 @@ cd dotfiles
 stow zsh \
 	i3 \
 	alacritty \
-	bat
+	bat \
+	gitconfig
 ```
 
