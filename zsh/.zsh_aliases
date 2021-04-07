@@ -16,3 +16,4 @@ alias vi="nvim"
 # Danger! If the branch exists locally then local modifications will be rejected.
 # When in doubt run git branch -a first or use gcb <new_branch> and ggpush
 function gbr () { git checkout -B "$1"; git push -u origin "$1"; }
+alias gfix='git add -A; git commit --amend --no-edit; git push --force'
