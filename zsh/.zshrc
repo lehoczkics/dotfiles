@@ -151,6 +151,10 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS="true"
 # less default switches
 export LESS="-FRXS"
 
+# bat
+export BAT_PAGER="less -RF"
+alias cat="/usr/bin/bat"
+
 # PATH
 pathmunge () {
         if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then

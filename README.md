@@ -8,7 +8,9 @@ The repo is meant to be cloned into your home dir and the environment to be crea
 on top of the above:<br>
 - alacritty
 - autojump
+- bat
 - colorls
+- delta
 - dracula-gtk
 - fonts-hack
 - fonts-powerline
@@ -24,6 +26,7 @@ git clone git@github.com:lehoczkics/dotfiles.git
 cd dotfiles
 stow zsh \
 	i3 \
-	alacritty
+	alacritty \
+	bat
 ```
 
