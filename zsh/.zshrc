@@ -85,9 +85,9 @@ plugins=(
 	thefuck
 	systemd
 	ubuntu
-	z
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+	zsh-z
 	)
 
 source $ZSH/oh-my-zsh.sh
