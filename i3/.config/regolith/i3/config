@@ -699,16 +699,19 @@ for_window [window_type="menu"] floating enable
 exec --no-startup-id geany
 exec --no-startup-id /usr/bin/st -t "Simple Terminal" -f "MesloLGS NF:size=11"
 exec --no-startup-id spotify
+exec --no-startup-id nemo
 
 # move them to scratch
 for_window [class="Geany"] move to scratchpad
 for_window [class="St"] move to scratchpad
 for_window [class="Spotify"] move to scratchpad
+for_window [class="Nemo"] move to scratchpad
 
 # keybindings
 bindsym $mod+q [class="Geany"] scratchpad show, resize set 1240 1024
 bindsym $mod+s  [class="St"] scratchpad show, resize set 1240 1024, move position center
 bindsym $mod+y [class="Spotify"] scratchpad show, resize set 1240 1024
+bindsym $mod+backslash [class="Nemo"] scratchpad show, resize set 1240 1024
 
 # scratchpad mode launcher
 set $scratchpad_mode_launcher scratchpad_startup
@@ -716,6 +719,7 @@ mode "$scratchpad_mode_launcher" {
 	bindsym q exec --no-startup-id geany
 	bindsym s exec --no-startup-id /usr/bin/st -t "Simple Terminal" -f "MesloLGS NF:size=11"
 	bindsym y exec --no-startup-id spotify
+	bindsym backslash exec --no-startup-id nemo
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
 	bindsym $mod+p mode "default"
