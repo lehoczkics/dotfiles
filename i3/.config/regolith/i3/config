@@ -704,13 +704,13 @@ exec --no-startup-id nemo --class=float_ba
 # move them to scratch
 for_window [class="float_q"] move to scratchpad
 for_window [class="float_s"] move to scratchpad
-for_window [class="float_y"] move to scratchpad
+for_window [class="Spotify"] move to scratchpad
 for_window [class="float_ba"] move to scratchpad
 
 # keybindings
 bindsym $mod+q [class="float_q"] scratchpad show, resize set 1240 1024
 bindsym $mod+s [class="float_s"] scratchpad show, resize set 1240 1024, move position center
-bindsym $mod+y [class="float_y"] scratchpad show, resize set 1240 1024
+bindsym $mod+y [class="Spotify"] scratchpad show, resize set 1240 1024
 bindsym $mod+backslash [class="float_ba"] scratchpad show, resize set 1240 1024
 
 # scratchpad mode launcher
@@ -718,7 +718,7 @@ set $scratchpad_mode_launcher scratchpad_startup
 mode "$scratchpad_mode_launcher" {
 	bindsym q exec --no-startup-id geany --class=float_q
 	bindsym s exec --no-startup-id mate-terminal --class=float_s
-	bindsym y exec --no-startup-id spotify --class=float_y
+	bindsym y exec --no-startup-id spotify
 	bindsym backslash exec --no-startup-id nemo --class=float_ba
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
