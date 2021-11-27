@@ -134,7 +134,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # fuzzy git diffs
-fd() {
+fgd() {
   preview="git diff $@ --color=always -- {-1}"
   git diff $@ --name-only | fzf -m --ansi --preview $preview
 }
@@ -154,6 +154,9 @@ export LESS="-FRXS"
 # bat
 export BAT_PAGER="less -RF"
 alias cat="/usr/bin/bat"
+
+# fd for find
+alias fd="/usr/bin/fdfind"
 
 # PATH
 pathmunge () {
