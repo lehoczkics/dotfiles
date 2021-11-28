@@ -694,6 +694,9 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
+# Prevent dialog windows from hiding behind floating parents
+for_window [window_type="dialog"] focus
+
 # scratchpads
 # start them on load
 exec --no-startup-id geany --class=float_q
@@ -706,6 +709,10 @@ for_window [class="float_q"] move to scratchpad
 for_window [class="float_s"] move to scratchpad
 for_window [class="Spotify"] move to scratchpad
 for_window [class="float_ba"] move to scratchpad
+
+# allow dialogs to come forward behind them
+for_window [class="float_q"][window_type=dialog] focus
+for_window [class="float_ba"][window_type=dialog] focus
 
 # keybindings
 bindsym $mod+q [class="float_q"] scratchpad show, resize set 1240 1024
@@ -725,9 +732,6 @@ mode "$scratchpad_mode_launcher" {
 	bindsym $mod+p mode "default"
 }
 bindsym $mod+p mode "$scratchpad_mode_launcher"
-
-# for_window [class="Geany"] floating enable, resize set 1024 768; move position center, move to scratchpad, scratchpad show
-# bindsym $mod+q [class="Geany"] scratchpad show
 
 # clipboard manager
 set $greenclip ~/bin/greenclip
