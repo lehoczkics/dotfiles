@@ -6,7 +6,6 @@ The repo is meant to be cloned into your home dir and the environment to be crea
 ![neofetch output](img/neofetch_regolith_20211123.png)
 
 <br>
-Theme: [Dracula](https://draculatheme.com/)
 
 ## Install guide
 Spin up your favourite Ubuntu live environment ( my flavour is [Mate](https://ubuntu-mate.org/download/amd64/focal/) ) and follow [zfs-installer](https://github.com/64kramsystem/zfs-installer).<br>
