@@ -8,7 +8,7 @@ alias kbus="setxkbmap -layout us"
 alias kben="setxkbmap -layout us"
 alias ltt="ls -ltr | tail -20"
 alias src="cd ~/src"
-alias please='sudo $(history -1| sed "s/^ [0-9]\+ //")'
+alias please='sudo $(history -1| sed "s/^[0-9]\+  //")'
 alias ssh='TERM=xterm-256color ssh'
 alias vim="nvim"
 alias vi="nvim"
