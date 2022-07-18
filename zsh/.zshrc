@@ -144,9 +144,10 @@ fgd() {
   git diff $@ --name-only | fzf -m --ansi --preview $preview
 }
 
-# colorls magic
-source $(dirname $(gem which colorls))/tab_complete.sh
-alias ls="colorls --sd -lA"
+# colorls magic replaced with ls deluxe aka lsd
+#source $(dirname $(gem which colorls))/tab_complete.sh
+#alias ls="colorls --sd -lA"
+alias ls=lsd
 
 # alias-finder auto 
 ZSH_ALIAS_FINDER_AUTOMATIC=true
