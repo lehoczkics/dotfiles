@@ -84,12 +84,10 @@ plugins=(
 	bgnotify
 	git
 	pass
-	thefuck
 	systemd
 	ubuntu
 	zsh-syntax-highlighting
 	zsh-autosuggestions
-	zsh-z
 	)
 
 source $ZSH/oh-my-zsh.sh
