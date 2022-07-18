@@ -9,15 +9,18 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-    features = side-by-side line-numbers decorations navigate
+    features = line-numbers decorations navigate
     whitespace-error-style = 22 reverse
     plus-style = "syntax #012800"
     minus-style = "syntax #340001"
     syntax-theme = Dracula
-    line-numbers-left-format = ""
-    line-numbers-right-format = "│ "
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
     hunk-header-decoration-style = yellow box
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
