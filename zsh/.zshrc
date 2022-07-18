@@ -159,7 +159,9 @@ export LESS="-FRXS"
 
 # bat
 export BAT_PAGER="less -RF"
-alias cat="/usr/bin/bat"
+export BAT_THEME="Dracula"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+alias cat="/usr/bin/batcat"
 
 # fd for find
 alias fd="/usr/bin/fdfind"
